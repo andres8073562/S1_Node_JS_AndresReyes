@@ -12,8 +12,12 @@ class Autor {
         }
     }
     //Quitar libro de ambos lados
-    quitarLibro(){
-
+    quitarLibro(libro){
+        const index = this.libros.indexOf(libro);
+        if(index !== -1){
+            this.libros.splice(index,1);
+            libro.setAutor(null);
+        }
     }
 }
 
